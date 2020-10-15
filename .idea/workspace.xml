@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6896c67a-f0c8-48ee-9c08-fdc93266d00c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ru/arhiser/tree1/Структура Tree.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/arhiser/tree2/graph2/Graph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/arhiser/tree2/graph2/MyQueue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/arhiser/tree2/graph2/MyStack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/arhiser/tree2/graph2/Runner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/arhiser/tree2/graph2/Vertex.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ru/arhiser/tree2/graph2/Граф и пути обхода.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/arhiser/tree5/BinaryTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/arhiser/tree5/Node.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/arhiser/file_search/files.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/arhiser/file_search/Filess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/arhiser/tree1/tree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/arhiser/tree1/tree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/arhiser/tree2/Tree2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/arhiser/tree2/Tree2.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,10 +35,11 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../job4j" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\projects\java_tutorials" />
       <recent name="C:\projects\java_tutorials\src\ru\arhiser" />
       <recent name="C:\projects\java_tutorials\src\ru\arhiser\tree2" />
       <recent name="C:\projects\java_tutorials\src\ru\arhiser\tree1" />
@@ -76,7 +68,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Calendars">
+  <component name="RunManager" selected="Application.BinaryTree">
+    <configuration name="BinaryTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.arhiser.tree5.BinaryTree" />
+      <module name="stream" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.arhiser.tree5.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Calendars" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.arhiser.time.Calendars" />
       <module name="stream" />
@@ -129,33 +134,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Search" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.arhiser.search.Search" />
-      <module name="stream" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.arhiser.search.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="Application.Search" />
       <item itemvalue="Application.Millis" />
       <item itemvalue="Application.Dates" />
       <item itemvalue="Application.Dateformat" />
       <item itemvalue="Application.Calendars" />
+      <item itemvalue="Application.BinaryTree" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BinaryTree" />
         <item itemvalue="Application.Calendars" />
         <item itemvalue="Application.Dateformat" />
         <item itemvalue="Application.Dates" />
         <item itemvalue="Application.Millis" />
-        <item itemvalue="Application.Search" />
       </list>
     </recent_temporary>
   </component>
@@ -170,6 +162,21 @@
       <option name="presentableId" value="Default" />
       <updated>1549137830126</updated>
     </task>
+    <task id="LOCAL-00001" summary="Работа с деревьями. Новые варианты">
+      <created>1602770007753</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1602770007753</updated>
+    </task>
+    <task id="LOCAL-00002" summary="gitignore">
+      <created>1602770054539</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1602770054539</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView">
@@ -191,6 +198,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Работа с деревьями. Новые варианты" />
+    <MESSAGE value="gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="gitignore" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
