@@ -4,7 +4,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-public class files {
+public class Filess {
 
     public static void main(String[] args) {
         ArrayList<File> fileList = new ArrayList<>();
