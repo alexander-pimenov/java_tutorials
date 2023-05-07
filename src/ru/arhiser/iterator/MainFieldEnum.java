@@ -1,7 +1,7 @@
 package ru.arhiser.iterator;
 
-import ru.arhiser.object.Field;
-import ru.arhiser.object.FieldEnumerator;
+import ru.arhiser.reflection.Field;
+import ru.arhiser.reflection.FieldEnumerator;
 
 public class MainFieldEnum {
 
