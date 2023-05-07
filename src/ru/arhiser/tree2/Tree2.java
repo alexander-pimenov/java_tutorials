@@ -3,19 +3,25 @@ package ru.arhiser.tree2;
 import ru.arhiser.stack.SimpleQueue;
 import ru.arhiser.stack.SimpleStack;
 
-import java.util.Stack;
-
 public class Tree2 {
     public static void main(String[] params) {
         Tree root =
                 new Tree(20,
                         new Tree(7,
-                                new Tree(4, null, new Tree(6)), new Tree(9)),
+                                new Tree(4, null,
+                                        new Tree(6)),
+                                new Tree(9)),
                         new Tree(35,
-                                new Tree(31, new Tree(28), null),
-                                new Tree(40, new Tree(38), new Tree(52))));
+                                new Tree(31,
+                                        new Tree(28), null),
+                                new Tree(40,
+                                        new Tree(38),
+                                        new Tree(52)))
+                );
 
         System.out.println("Сумма дерева: " + sumWide(root));
+        System.out.println("===============================");
+        System.out.println("Сумма дерева: " + sumDeep(root));
     }
 
     static class Tree {
@@ -34,6 +40,16 @@ public class Tree2 {
         }
     }
 
+    /**
+     * Рекурсивный обход дерева в глубину.
+     * Метод вичисляющий сумму чисел во всех узлах.
+     * Сначала этот алгоритм идет влевую часть дерева, старается
+     * углубиться влево, оставляя правую сторону пока не просмотренной.
+     * И потом переходит в правую часть дерева, как закончит с
+     * левой частью.
+     *
+     * @return сумма чисел.
+     */
     public static int sumRecursive(Tree root) {
         int summ = root.value;
 
@@ -47,42 +63,64 @@ public class Tree2 {
         return summ;
     }
 
+    /**
+     * Итеративный обход дерева в глубину.
+     * Используется структура Стек.
+     * FILO
+     *
+     * @param root корень дерева.
+     * @return сумма узлов.
+     */
     public static int sumDeep(Tree root) {
-        SimpleStack<Tree> stack = new SimpleStack<>();
-
         //Здесь можно применять и классические джавовские стек и очередь
 //        Stack<Tree> stack1 = new Stack<>();
 //        stack1.push(root);
 //        stack1.pop();
 
-
+        /*Используем свой созданный ранее стек.*/
+        SimpleStack<Tree> stack = new SimpleStack<>();
+        /*Кладем в стек корневой узел, с которого мы начинаем
+         * проход по дереву.*/
         stack.push(root);
 
         int summ = 0;
 
+        /*И пока стек не пустой:*/
         while (!stack.isEmpty()) {
+            /*достаем узел из стека*/
             Tree node = stack.pop();
 
+            /*Это чтобы видеть в каком порядке алгоритм обошел
+             * узлы дерева.*/
             System.out.println(node.value);
 
+            /*прибавляем к сумме число, которое находится внутри узла.*/
             summ = summ + node.value;
 
+            /*проверяем на наличие у узла правого потомка, и если он
+             * есть, то кладем в стек.*/
             if (node.right != null) {
                 stack.push(node.right);
             }
 
+            /*проверяем на наличие у узла левого потомка, и если он
+             * есть, то кладем тоже в стек.*/
             if (node.left != null) {
                 stack.push(node.left);
             }
         }
+        /*Возвращаем вычисленую сумму.*/
         return summ;
     }
 
     /**
-     * Обход дерева в ширину
+     * Итеративный обход дерева в ширину.
+     * Используется структура Очередь.
+     * FIFO
+     * Дерево обходится по уровням и слева направо.
      *
-     * @param root корень-вершина дерева
-     * @return сумма узлов
+     * @param root корень дерева.
+     * @return сумма узлов.
      */
     public static int sumWide(Tree root) {
         //Здесь можно применять и классические джавовские стек и очередь
