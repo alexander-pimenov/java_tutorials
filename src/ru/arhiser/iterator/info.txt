@@ -1,0 +1,2 @@
+Java. Об Iterator и Iterable c примерами.
+https://www.youtube.com/watch?v=LG-q2VBUSCw
