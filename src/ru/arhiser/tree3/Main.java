@@ -4,21 +4,24 @@ import ru.arhiser.funcops.inter.Func2;
 
 import java.util.ArrayList;
 
+/**
+ * В примере строим дерево из элементов и выводим в консоль строки с именами листовых узлов.
+ */
 public class Main {
 
     public static void main(String[] params) {
         ArrayList<Data> items = new ArrayList<>();
 
-        items.add(new Data(1, "Соки", 0));
-        items.add(new Data(2, "Манго", 1));
-        items.add(new Data(3, "Виноградный", 1));
-        items.add(new Data(4, "Яблочный", 1));
-        items.add(new Data(5, "Газировка", 0));
-        items.add(new Data(6, "Кола", 5));
-        items.add(new Data(7, "Кола 0.5л", 6));
-        items.add(new Data(8, "Кола 1.5л", 6));
-        items.add(new Data(9, "Минералка", 5));
-        items.add(new Data(10, "Лимонад", 5));
+        items.add(new Data(1, "Juices", 0));
+        items.add(new Data(2, "Mango Juice", 1));
+        items.add(new Data(3, "Grape Juice", 1));
+        items.add(new Data(4, "Apple Juice", 1));
+        items.add(new Data(5, "Gaz Water", 0));
+        items.add(new Data(6, "Cola", 5));
+        items.add(new Data(7, "Cola 0.5L", 6));
+        items.add(new Data(8, "Cola 1.5L", 6));
+        items.add(new Data(9, "Mineral Water", 5));
+        items.add(new Data(10, "Lemonade", 5));
 
         DataNode tree = DataNode.makeTree(items, new TreeNode.TypeAdapter<Data, DataNode>() {
             @Override
@@ -47,7 +50,7 @@ public class Main {
             return names1;
         }, "");
 
-        System.out.println("Имена товаров: " + names);
+        System.out.println("Names of goods: " + names); //Names of goods: Mango Juice, Grape Juice, Apple Juice, Cola 0.5L, Cola 1.5L, Mineral Water, Lemonade
     }
 
     static class DataNode extends TreeNode<Data, DataNode> {

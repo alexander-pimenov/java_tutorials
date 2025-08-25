@@ -29,7 +29,7 @@ public class Node {
     }
 
     public void treatment() {
-        System.out.println(String.format("Node Value: %s - Parent: %s do something.", this.value, this.parent));
+        System.out.printf("Node Value: %s - Parent: %s do something.%n", this.value, this.parent);
     }
 
     /**

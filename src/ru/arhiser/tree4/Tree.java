@@ -19,10 +19,25 @@ public class Tree {
                         new Node("Plum green"),
                         new Node("Plum red")));
 
-//        contInOrder(root);
+        System.out.println("==Горизонтальный обход дерева.==");
+        contLevelOrder(root); //Горизонтальный обход дерева.
+        System.out.println("\n\n");
+        System.out.println("==Вертикальный обход дерева.==");
+        contInOrder(root); // Вертикальный обратный обход дерева.
+        System.out.println("\n\n");
+        System.out.println("==Вертикальный прямой обход дерева.==");
+        contPreOrder(root); // Вертикальный прямой обход дерева.
+        System.out.println("\n\n");
+        System.out.println("==Вертикальный концевой обход дерева.==");
+        contPostOrder(root); // Вертикальный концевой обход дерева.
+
+//        System.out.println("\n\n");
+//        System.out.println("==Вертикальный концевой обход дерева с указателем на родителя.==");
+//        parentPostOrder(root); // Вертикальный концевой обход дерева с указателем на родителя.
+
 //        root.recursivePreOrder();
 //        root.recursiveInOrder();
-        root.recursivePostOrder();
+//        root.recursivePostOrder();
         //Tree root =
         //                new Tree(20,
         //                        new Tree(7,
@@ -162,6 +177,8 @@ public class Tree {
     }
 
     /**
+     * TODO: что-то не взлетело, подумать как исправить.
+     *
      * Вертикального концевой обход дерева с использованием
      * родительских указателей.
      * Есть возможность из произвольного узла дерева «дойти»
