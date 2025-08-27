@@ -4,12 +4,15 @@ import ru.arhiser.funcops.inter.Func2;
 
 import java.util.ArrayList;
 
+import static java.util.Objects.hash;
+
 /**
  * В примере строим дерево из элементов и выводим в консоль строки с именами листовых узлов.
  */
 public class Main {
 
     public static void main(String[] params) {
+
         ArrayList<Data> items = new ArrayList<>();
 
         items.add(new Data(1, "Juices", 0));
